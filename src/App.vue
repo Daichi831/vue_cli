@@ -48,6 +48,7 @@ export default {
       } else {
         this.showPage = false;
       }
+      this.newMemo = "";
     },
     add: function() {
       if (!this.newMemo) {
@@ -67,6 +68,9 @@ export default {
     edit: function(index) {
       this.editMemo = this.memos[index];
       this.editIndex = index + 1;
+      if (this.showPage === true) {
+        this.showPage = false;
+      }
     },
     update: function(index) {
       if (!this.editMemo) {
